@@ -74,4 +74,6 @@ These were subtle bugs.  They took trial and error to find.  However, in total, 
 
 Many companies try to silence security bug reporters through legal threats and sometimes even action, driving discoverers of bugs underground and onto the black market where such knowledge can do real harm.  Google has set an admirable example by creating a program that is enlightened, responsive, and well-run, and I hope other companies move in the same direction.  
 
-I had a great time using [jsFiddle](http://jsFiddle.com) to explore and demonstrate bugs.  You can do the same-- check out their [guidelines](http://googleonlinesecurity.blogspot.com/2010/11/rewarding-web-application-security.html) and do your part to improve the security of products that you love.
+I had a great time using [jsFiddle](http://jsFiddle.net) to explore and demonstrate bugs.  You can do the same-- check out their [guidelines](http://googleonlinesecurity.blogspot.com/2010/11/rewarding-web-application-security.html) and do your part to improve the security of products that you love.
+
+Enjoyed this post?  You should <a href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fblog.andrewcantino.com%2Fblog%2F2011%2F12%2F14%2Fhacking-google-for-fun-and-profit%2F&region=follow_link&screen_name=tectonic&source=followbutton&variant=2.0">follow me on Twitter</a>.
