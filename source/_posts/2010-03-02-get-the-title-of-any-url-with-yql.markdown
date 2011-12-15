@@ -6,13 +6,8 @@ date: 2010-03-02 18:03
 comments: true
 categories: [scraping, data]
 ---
-
 <p>This snippet demonstrates how to get the title from any webpage using a simple YQL query and jQuery.  The title is fetched from <code>url</code> and is placed in <code>#page_title</code>.
 
-
-
-<p class="embed_gist"><a href="http://gist.github.com/320406"><a href="http://gist.github.com/320406">http://gist.github.com/320406</a></a></p>
-
-
+{% gist 320406 %}
 
 This was very handy for a project I&#8217;m working on.</p>

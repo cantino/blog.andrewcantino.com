@@ -6,11 +6,7 @@ date: 2010-03-02 18:03
 comments: true
 categories: tools
 ---
+If you&#8217;re running Chrome on Ubuntu (likely elsewhere too), you can run multiple copies of Chrome with fully different profiles by launching it with the <code>--user-data-dir</code> option.  For example, I run two copies of Chrome like so:
 
-<p>If you&#8217;re running Chrome on Ubuntu (likely elsewhere too), you can run multiple copies of Chrome with fully different profiles by launching it with the <code>--user-data-dir</code> option.  For example, I run two copies of Chrome like so:
-
-<pre><div style="font-size: 0.9em">/opt/google/chrome/google-chrome --user-data-dir=~/.config/google-chrome-work &amp;
-
-/opt/google/chrome/google-chrome --user-data-dir=~/.config/google-chrome-personal &amp;
-
-</div></pre></p>
+    /opt/google/chrome/google-chrome --user-data-dir=~/.config/google-chrome-work &amp;
+    /opt/google/chrome/google-chrome --user-data-dir=~/.config/google-chrome-personal &amp;
