@@ -5,7 +5,7 @@ date: 2011-12-14 20:37
 comments: true
 categories: security
 ---
-At the end of last year, Google announced their [Vulnerability Reward Program](http://googleonlinesecurity.blogspot.com/2010/11/rewarding-web-application-security.html) which rewards security researchers for reported security and privacy holes in Google properties.  This sounded like an interesting challenge, and I set out to find security holes.  I found three, got paid, and am now in the [Google Security Hall of Fame](http://www.google.com/about/corporate/company/halloffame.html). All and all, a rewarding experience.
+At the end of last year, Google announced their [Vulnerability Reward Program](http://googleonlinesecurity.blogspot.com/2010/11/rewarding-web-application-security.html) which rewards security researchers for reported security and privacy holes in Google properties.  This sounded like an interesting challenge, and I set out to find security holes.  I found three, got paid, and am now in the [Google Security Hall of Fame](http://www.google.com/about/corporate/company/halloffame.html). All in all, a rewarding experience.
 
 Below I describe the three security holes that I found.
 
@@ -41,7 +41,7 @@ This bug would have allowed a malicious website to determine your Google usernam
 
 Again, this is a type of Cross Site Request Forgery, specifically known as [Clickjacking](http://en.wikipedia.org/wiki/Clickjacking), which can be especially hard to prevent.  There are many types of Clickjacking, almost all of which use iframes.  One approach, which I used here, is to artfully display content from a target site in such a way as to look like it's part of the current page. Another approach is to hide the iframe invisibly under the user's cursor, moving it as the cursor moves, and causing the user to click on the other site without realizing it.
 
-Google correctly used the [X-XSS-Protection](http://msdn.microsoft.com/en-us/library/dd565647(v=vs.85).aspx) and [X-Frame-Options](https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header) headers, but some browsers do not honor these.  The solution to this one is tricky, but it is generally to use [frame busting](http://en.wikipedia.org/wiki/Framekiller), to provide appropriate headers, to use CSRF tokens, and to not expose any user information without a direct user interaction.
+Google correctly used the [X-XSS-Protection](http://msdn.microsoft.com/en-us/library/dd565647.aspx) and [X-Frame-Options](https://developer.mozilla.org/en/The_X-FRAME-OPTIONS_response_header) headers, but some browsers do not honor these.  The solution to this one is tricky, but it is generally to use [frame busting](http://en.wikipedia.org/wiki/Framekiller), to provide appropriate headers, to use CSRF tokens, and to not expose any user information without a direct user interaction.
 
 ## Deletion of all future email 
 
@@ -68,7 +68,7 @@ Google says this has now been fixed.
 
 In all three cases, Google responded promptly to my security report and fixed the bug within a reasonable amount of time.  I was given two $500 awards for the three bugs.  Google generously doubled these amounts when I chose to donate them to charity, so the [Athens Conservency](http://www.athensconservancy.org/) and the [Buckeye Forest Council](http://www.buckeyeforestcouncil.org/), two of my favorite local charities in Athens, OH, received one thousand dollars each, care of Google.
 
-These were subtle bugs.  They took trial and error to find.  However, in total, I only spent a few spare evenings of my time.  If Google's products- some of the most secure in the world- are suseptible to these sorts of attacks, you can bet many others are as well.  Every programer makes these mistakes sometimes.  Security is too complicated for anyone to get right all of the time.  Check your code!
+These were subtle bugs.  They took trial and error to find.  However, in total, I only spent a few spare evenings of my time.  If Google's products- some of the most secure in the world- are susceptible to these sorts of attacks, you can bet many others are as well.  Every programer makes these mistakes sometimes.  Security is too complicated for anyone to get right all of the time.  Check your code!
 
 ##Take your security into your own hands... or, why you should hack Google too!
 
