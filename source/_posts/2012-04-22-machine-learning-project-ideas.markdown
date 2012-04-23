@@ -35,3 +35,11 @@ categories: [ideas, ruby, machine learning]
 Once you know what's possible, it's hard to find a project that *wouldn't* benefit from some machine learning.
 
 Have other ideas?  Want to discuss these?  Post them in the comments and follow [@tectonic](http://twitter.com/tectonic) for updates.
+
+## Update
+
+And here are the slides:
+
+<div style="width:425px" id="__ss_12657157"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/ryanstout/practical-machine-learning-and-rails-part1" title="Practical Machine Learning and Rails Part1" target="_blank">Practical Machine Learning and Rails Part1</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/12657157" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
+
+<div style="width:425px" id="__ss_12657166"> <strong style="display:block;margin:12px 0 4px"><a href="http://www.slideshare.net/ryanstout/practical-machine-learning-and-rails-part2" title="Practical Machine Learning and Rails Part2" target="_blank">Practical Machine Learning and Rails Part2</a></strong> <iframe src="http://www.slideshare.net/slideshow/embed_code/12657166" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></div>
