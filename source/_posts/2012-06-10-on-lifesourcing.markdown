@@ -13,14 +13,14 @@ I'd like to talk about some tips and tricks, but first, let me list a few of the
 
 ### Personal Things
 
-* A carpenter on Craigslist designed and built a custom, adjustable standing desk for me.
 * My wife and I outsourced hand written, cursive wedding invitations on [TaskRabbit](http://taskrabbit.com/PAL/29828).  (My mother-in-law preferred them to be hand written, my hand writing stinks, and my wife didn't have the time.)
 * Also for our wedding, someone on [Fiverr](http://fiverr.com) polished our save-the-date photo.
 * After the wedding, we hired a wonderful, well-traveled woman on TaskRabbit to help plan our honeymoon in South America.
 * We paid a TaskRabbit to scan all of our wedding cards for posterity.
 * Currently, we have a virtual assistant from [oDesk](http://odesk.com) who helps us with the ocasional life task.  She has proofread documents and called gyms around San Francisco, looking for ones with good pools.
-* We've given friends custom, hand painted watercolor birthday cards from [Fiverr](http://fiverr.com) and custom wedding presents from [Etsy](http://etsy.com).  (Which, one couple swears, is their favorite wedding present!)
+* We've given friends custom, hand painted watercolor birthday cards from [Fiverr](http://fiverr.com) and custom wedding presents from [Etsy](http://etsy.com).  (Which, one couple swears, is their favorite wedding present!)  We designed the art (roughly) and then it was made with skill by the artists.
 * When I have outstanding questions, I turn to Aardvark, Yahoo! Answers, and other outsourced question answering services.  I would gladly pay for a better one.
+* A carpenter on Craigslist designed and built a custom, adjustable standing desk for me.  (Arguably outsourcing, arguably not.)
 
 ### (Micro-)business Things
 
