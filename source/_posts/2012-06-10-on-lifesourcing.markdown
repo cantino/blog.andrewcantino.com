@@ -1,17 +1,17 @@
 ---
 layout: post
-title: "On Lifesourcing"
+title: "My experiences with personal outsourcing"
 date: 2012-06-10 16:42
 comments: true
 categories: [lifesourcing]
 ---
-Lifesourcing is the practice of modularizing and outsourcing parts of your life that you don't enjoy so that you can maximize the parts that you do.  It's outsourcing (with many of the same pros and cons), but for your personal life.
+Over the last few years I've been experimenting with outsourcing.  I've done this both for personal and business projects.  In the personal domain, some people call this "lifesourcing": the practice of modularizing and outsourcing parts of your life that you don't enjoy so that you can maximize the parts that you do.  It's outsourcing (with many of the same pros and cons), but for your personal life.
 
-A growing number of sites have popped up recently to facilitate lifesourcing, and while these sites aren't strictly needed- you can still find skilled people to help you on Craigslist, for example- they make lifesourcing even easier.
+A growing number of sites have popped up recently to facilitate lifesourcing, and while these sites aren't strictly needed- you can still find skilled people to help you on Craigslist, for example- they make this sort of outsourcing even easier.
 
-I'd like to talk about some tips and tricks, but first, let me list a few of the things that I have lifesourced and outsourced over the last couple of years.
+I'd like to talk about some tips and tricks, but first, let me list a few of the things that I have outsourced over the last couple of years.
 
-### Things I've lifesourced:
+### Personal Things
 
 * A carpenter on Craigslist designed and built a custom, adjustable standing desk for me.
 * My wife and I outsourced hand written, cursive wedding invitations on [TaskRabbit](http://taskrabbit.com/PAL/29828).  (My mother-in-law preferred them to be hand written, my hand writing stinks, and my wife didn't have the time.)
@@ -22,7 +22,7 @@ I'd like to talk about some tips and tricks, but first, let me list a few of the
 * We've given friends custom, hand painted watercolor birthday cards from [Fiverr](http://fiverr.com) and custom wedding presents from [Etsy](http://etsy.com).  (Which, one couple swears, is their favorite wedding present!)
 * When I have outstanding questions, I turn to Aardvark, Yahoo! Answers, and other outsourced question answering services.  I would gladly pay for a better one.
 
-### On the (micro-)business side of things:
+### (Micro-)business Things
 
 * I've hired artists and logo designers on Fiverr.  (I actually bought some excellent artwork and had an ongoing business relationship with an artist who I found for $5 on Fiverr.)
 * Workers on oDesk and TaskRabbit have helped me brainstorm domain names.
@@ -42,4 +42,4 @@ I'd like to talk about some tips and tricks, but first, let me list a few of the
 * There are a shockingly large number of people on this planet who speak (nearly) perfect English, have sharp wits, and are looking for work.  If you have tasks that you can pay them a fair wage to solve, you're helping everyone.  And remember, a fair wage in the Philippines (where many people speak English perfectly), is significantly less than in the US.  Do your cost of living research and pay fairly and generously!
 * Accountability and incentives are important.  I left Mechanical Turk and instead interviewed and hired individuals off oDesk for data labeling tasks because I received better quality and had more consistency over who I was working with.
 
-Are you a lifesourcer or a micro-outsourcer?  What have you lifesourced?  What have you learned?
+Are you a lifesourcer or a micro-outsourcer?  What have you learned?
