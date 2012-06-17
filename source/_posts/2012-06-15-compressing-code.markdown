@@ -223,24 +223,18 @@ categories: [code, ideas, data]
   </style>
 </div>
 
-What can we learn about a code base or a language based on its compressibility?  What about the mutual compressibility of different code bases?
-
-This may seem a strange question to ask; what does compressibility have to do with anything?  In fact, being able to compress something is fundamental to being able to understanding it.  If you can rewrite a 2 page document into 2 paragraphs, while still expressing its core ideas, you've deeply understood the material.  Hence the existence of the [Hutter Prize](http://en.wikipedia.org/wiki/Hutter_Prize), a standing challenge in Artificial Intelligence to further compress a corpus of English text.  Hence, also, the existence of [specialized image compression algorithms](http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf) that compress human faces better than anything else because they understand, in software, what a human face generally looks like.
-
-If I can compress an image of your face, I can probably also recognize it.  Imagine that I have thousands of photos of faces.  Using some linear algebra and creative encodings, I can figure out the commonalities and differences among these faces.  Basically, I can derive a set of common noses, a set of common eyes, a set of common brows... and, given a new face photo, I can compute a mixture of these common attributes for the new face.  Perhaps it, roughly speaking, has 60% of Common Nose 6 and 40% of Common Nose 12.  Well, then I can represent the picture of this new nose as roughly two numbers, the "amounts" of Nose 6 and of Nose 12, and suddenly I've compressed a collection of hundreds or thousands of pixels- a photo of a nose- into just two numbers.  We could also go in reverse, taking a photo, calculating the percentages of different common features, and then looking up in a database to see who we know whose face expresses those same feature percentages.  We can compress, and, thus, we can recognize.  (Interested in this?  See [Eigenfaces](http://en.wikipedia.org/wiki/Eigenface) as well as [PCA and ICA for face analysis](http://www.face-rec.org/algorithms/Comparisons/draper_cviu.pdf).)
-
-So... that aside, what does any of this have to do with the compressibility of computer code?  Well, my pet theory is that less compressible code will be, on average, better code.  This is because less compressible code implies more factoring, more reuse, and fewer repetitions.
+What can we learn about a code base or a language based on its compressibility?  My pet theory is that less compressible code will be, on average, better code, because less compressible code implies more factoring, more reuse, and fewer repetitions.
 
 <div class='cross-language-wrapper box'>
   <div id='cross-language'></div>
   <div>
-    Larger numbers (longer lines) mean more compressible.<br/ >I argue that shorter lines- less compressible- may be better.
+    Larger numbers (longer lines) indicate more compressibility.
   </div>
 </div>
 
 Below are the compressibility results for some popular libraries and languages.  To generate this data, I downloaded each package or library, extracted the source files, removed comments, and gzipped the files with maximum compression.  The numbers represent the ratio of uncompressed source file size to compressed source file size.  Smaller ratios imply less compressible code.
 
-Somewhat unsurprisingly, Java was the most compressible language- all that boilerplate!  Python was the least compressible language, with Java, on average, being about twice as compressible.  I was somewhat surprised that JS was the second best language in terms of incompressibility.
+Unsurprisingly, Java was the most compressible language- all that boilerplate!  Python was the least compressible language, with Java, on average, being about twice as compressible.  I was somewhat surprised that JavaScript was the second best language in terms of incompressibility.
 
 It's probably disingenuous to draw strong conclusions from these results, but I still find them intriguing.  What, if anything, do you think they mean?
 
@@ -251,3 +245,9 @@ It's probably disingenuous to draw strong conclusions from these results, but I 
 
   <div id="visualizations"></div>
 </div>
+
+<br />
+
+<strong>Aside:</strong> Compression itself is a fascinating subject.  Being able to compress something is fundamental to being able to understanding it.  If you can rewrite a 2 page document into 2 paragraphs, while still expressing its core ideas, you've deeply understood the material.  Hence the existence of the [Hutter Prize](http://en.wikipedia.org/wiki/Hutter_Prize), a standing challenge in Artificial Intelligence to further compress a corpus of English text.  Hence, also, the existence of [specialized image compression algorithms](http://www.cs.technion.ac.il/~elad/publications/journals/2007/FaceCompress_KSVD_JVCIR.pdf) that compress human faces better than anything else because they understand, in software, what a human face generally looks like.
+
+If I can compress an image of your face, I can probably also recognize it.  Imagine that I have thousands of photos of faces.  Using some linear algebra and creative encodings, I can figure out the commonalities and differences among these faces.  Basically, I can derive a set of common noses, a set of common eyes, a set of common brows... and, given a new face photo, I can compute a mixture of these common attributes for the new face.  Perhaps it, roughly speaking, has 60% of Common Nose 6 and 40% of Common Nose 12.  Well, then I can represent the picture of this new nose as roughly two numbers, the "amounts" of Nose 6 and of Nose 12, and suddenly I've compressed a collection of hundreds or thousands of pixels- a photo of a nose- into just two numbers.  We could also go in reverse, taking a photo, calculating the percentages of different common features, and then looking up in a database to see who we know whose face expresses those same feature percentages.  We can compress, and, thus, we can recognize.  (Interested in this?  See [Eigenfaces](http://en.wikipedia.org/wiki/Eigenface) as well as [PCA and ICA for face analysis](http://www.face-rec.org/algorithms/Comparisons/draper_cviu.pdf).)
