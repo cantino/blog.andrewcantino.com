@@ -1,0 +1,30 @@
+.expando-region .expander,
+.expando-region .fake-expander {
+  cursor: pointer;
+  padding: 2px 0px;
+  color: #EF7A28;
+  -webkit-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+  text-decoration: none;
+}
+
+.expando-region a.expander:hover,
+.expando-region a.fake-expander:hover {
+  -webkit-transition: background-color .25s linear;
+  transition: background-color .25s linear;
+  background-color: #ececec;
+  text-decoration: none;
+}
+
+.expando-region a.external {
+  text-decoration: underline;
+  color: inherit;
+}
+
+.expando-region a.external:visited {
+  color: inherit;
+}
+
+.expando-region .break {
+  margin-bottom: 0px;
+}
