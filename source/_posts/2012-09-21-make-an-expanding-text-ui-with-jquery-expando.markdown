@@ -5,8 +5,6 @@ date: 2012-09-21 20:34
 comments: true
 categories: [ui, javascript]
 ---
-<script src="https://raw.github.com/cantino/expando/master/jquery.expando.js" type="text/javascript"></script>
-
 <script>
   jQuery(function() {
     jQuery("#expando-example").expando();
