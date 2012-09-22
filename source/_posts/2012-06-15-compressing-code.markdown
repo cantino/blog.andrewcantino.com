@@ -9,7 +9,6 @@ categories: [code, ideas, data]
   <script type="text/javascript" src="http://www.google.com/jsapi"></script>
   <script type="text/javascript">
     google.load('visualization', '1', {packages: ['corechart']});
-    google.load('jquery', '1');
   </script>
   <script type="text/javascript">
     function drawVisualization() {
@@ -138,7 +137,7 @@ categories: [code, ideas, data]
       ];
 
       var crossLanguageSummary = google.visualization.arrayToDataTable([["", ""]].concat(summary.reverse()));
-      new google.visualization.BarChart($("#cross-language").get(0)).draw(crossLanguageSummary,
+      new google.visualization.BarChart(jQuery("#cross-language").get(0)).draw(crossLanguageSummary,
             {title:"Average Compressability by Language",
               width: 400, height: 300,
               legend: { position: "none" },
@@ -146,13 +145,13 @@ categories: [code, ideas, data]
             });
 
 
-      $.each(languageData, function(name, value) {
+      jQuery.each(languageData, function(name, value) {
         var data = google.visualization.arrayToDataTable([["", ""]].concat(languageData[name].reverse()));
-        var $elem = $("<div></div>").addClass("visualization").addClass(name).css({ width: "600px", height: "400px", display: "none" });
-        $("#visualizations").append($elem);
-        $("#viz-links").append($('<a href="#"></a>').text(name).click(function(e) {
+        var $elem = jQuery("<div></div>").addClass("visualization").addClass(name).css({ width: "600px", height: "400px", display: "none" });
+        jQuery("#visualizations").append($elem);
+        jQuery("#viz-links").append(jQuery('<a href="#"></a>').text(name).click(function(e) {
           e.preventDefault();
-          $("#visualizations .visualization").hide();
+          jQuery("#visualizations .visualization").hide();
           $elem.show();
           return false;
         }));
@@ -166,7 +165,7 @@ categories: [code, ideas, data]
                });
       });
 
-      $("#visualizations .visualization.Ruby").show();
+      jQuery("#visualizations .visualization.Ruby").show();
     }
 
     google.setOnLoadCallback(drawVisualization);
