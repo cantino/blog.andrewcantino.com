@@ -5,7 +5,7 @@ date: 2013-02-16 14:08
 comments: true
 categories: [tools, machine learning, ruby]
 ---
-I've been using [ledger](http://ledger-cli.org/), combined with a custom Ruby gem called [reckon](https://github.com/cantino/reckon), to balance my small business's accounts for the last few years.  The command line, Bayesian statistics, and Double Entry Accounting!  What could be better?  Here's how I do it. 
+I've been using [ledger](http://ledger-cli.org/), combined with a custom Ruby gem called [reckon](https://github.com/cantino/reckon), to balance my small business's accounts for the [last few years](http://blog.andrewcantino.com/blog/2010/11/06/command-line-accounting-with-ledger-and-reckon/).  The command line, Bayesian statistics, and Double Entry Accounting!  What could be better?  Here's how I do it. 
 
 First, I export the year's transaction history from Chase (in my case) and save it as a CSV file called `chase-2012.csv`.  It looks something like this:
 
