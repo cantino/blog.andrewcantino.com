@@ -14,6 +14,8 @@ So, in this post, a very simple example:
 **Problem**: I always forget to check the weather, leave my umbrella at home, and get soaked.<br />
 **Solution**: Let Huginn send you an email (or SMS) each morning when rain is expected in your area.
 
+<!--more-->
+
 After having setup Huginn on your server, make a new WeatherAgent:
 
 {% img /images/posts/huginn/new-agent.png %}

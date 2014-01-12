@@ -4,12 +4,13 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "andrewca@andrewcantino.com"
-ssh_port       = "2424"
-document_root  = "/home/andrewca/public_html/blog"
-rsync_delete   = true
-rsync_args     = ""  # Any extra arguments to pass to rsync
-deploy_default = "rsync"
+# ssh_user       = "andrewca@andrewcantino.com"
+# ssh_port       = "2424"
+# document_root  = "/home/andrewca/public_html/blog"
+# rsync_delete   = true
+# rsync_args     = ""  # Any extra arguments to pass to rsync
+deploy_default = "s3"
+s3_bucket      = "blog.andrewcantino.com"
 
 # This will be configured for you when you run config_deploy
 deploy_branch  = "gh-pages"
@@ -27,6 +28,11 @@ new_post_ext    = "markdown"  # default new post file extension when using the n
 new_page_ext    = "markdown"  # default new page file extension when using the new_page task
 server_port     = "4000"      # port for preview server eg. localhost:4000
 
+desc "Deploy website via s3cmd with CloudFront cache invalidation"
+task :s3 do
+  puts "## Deploying website via s3cmd"
+  ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
+end
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
 task :install, :theme do |t, args|
