@@ -31,7 +31,7 @@ server_port     = "4000"      # port for preview server eg. localhost:4000
 desc "Deploy website via s3cmd with CloudFront cache invalidation"
 task :s3 do
   puts "## Deploying website via s3cmd"
-  ok_failed system("s3cmd sync --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
+  ok_failed system("s3cmd sync --guess-mime-type --delete-removed --acl-public --reduced-redundancy --cf-invalidate public/* s3://#{s3_bucket}/")
 end
 
 desc "Initial setup for Octopress: copies the default theme into the path of Jekyll's generator. Rake install defaults to rake install[classic] to install a different theme run rake install[some_theme_name]"
