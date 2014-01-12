@@ -3,7 +3,7 @@ layout: post
 title: "Archive a PDF of your Posterous blog"
 date: 2013-03-12 23:23
 comments: true
-categories: tools, archival
+categories: [tools, archival]
 ---
 My wife and I had a private travel blog on Posterous.  Unfortunately, Posterous got aquihired by Twitter and is shutting down, so I spent a few minutes figuring out how to save a PDF of the blog.  Chrome and Firefox did pretty poorly at saving a decent looking PDF for my long blog so I installed wkhtmltopdf and made one myself.  Here's how.
 
