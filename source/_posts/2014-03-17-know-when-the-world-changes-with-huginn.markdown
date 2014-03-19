@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Make Huginn watch the world for you with Twitter"
+title: "Know when the world changes-- with Huginn"
 date: 2014-03-17 14:04:09 -0700
 comments: true
 categories: [ruby, tools, huginn]
@@ -24,13 +24,13 @@ Copy your 'Access token', 'Access token secret', 'Consumer key', and 'Consumer s
 
 Now you're ready to make a TwitterStreamAgent! _"The TwitterStreamAgent follows the Twitter stream in real time, watching for certain keywords, or filters, that you provide."_  For this article, we're going to use a new TwitterStreamAgent to watch keywords of interest on Twitter and to tell us, every 30 minutes, how many times each keyword has been seen. This technique works great for common keywords, but not very well for rare ones. If you want to track rare keywords, like a unique product name, you could make a second TwitterStreamAgent and set it to generate `events` instead of `counts`, and then have these emailed to you whenever they occur.
 
-Okay, so set your new TwitterStreamAgent to run every `30 minutes`, keep events for `7 days`, and generate `counts`.  For the `filters` section you could enter `superbowl date announced`, `gravity waves detected`, and `huginn open source`.
+Okay, so set your new TwitterStreamAgent to run every `30 minutes`, keep events for `7 days`, and generate `counts`.  For the `filters` section you could enter `superbowl date announced`, `gravity waves detected`, and `huginn open source`.  Your Agent will keep track of each of these terms independently.
 
 Your screen should now look something like this:
 
 {% img /images/posts/huginn/new-twitter-stream-agent.png %}
 
-Next, let's setup a new PeakDetectorAgent. A PeakDetectorAgent is used to detect rising edges in a stream of data. In our case, we want to look for spikes in the Twitter event counts. The only change from the default here is to put "std\_multiple" to `5` instead of `3`. This is up to you, and just tunes how sensitive the agent will be. If you get too many or too few alerts, you can customize this value.
+Next, let's setup a new PeakDetectorAgent. A PeakDetectorAgent is used to detect rising edges in a stream of data. In our case, we want to look for spikes in the Twitter event counts. The only change from the default here is to put "std\_multiple" to `5` instead of `3`. This is up to you, and just tunes how sensitive the agent will be, with higher numbers requiring larger spikes before detection. If you get too many or too few alerts, you can customize this value.  (Here `std` stands for Standard Deviation.  Your data is likely not actually Gaussian, but STD still makes a nice tuning factor.)
 
 {% img /images/posts/huginn/new-peak-detector-agent.png %}
 
@@ -46,6 +46,6 @@ This Agent will format the JSON output from the peak detector into a more readab
 
 {% img /images/posts/huginn/afternoon-digest-agent.png %}
 
-This example Huginn Agent flow has a medium response time-- it responds 30-60 minutes after an interest spike starts on Twitter. Some topics demand a faster response time, like "san francisco tsunami warning", "flash ticket sale", or "stock market crashing". For alerts of this nature, I run a second TwitterStreamAgent and PeakDetectorAgent with the TwitterStreamAgent check time set to every 2 minutes, the PeakDetectorAgent set to immediate propagation, and with an email or SMS agent.
+This example Huginn Agent flow has a medium response time-- it responds 30-60 minutes after an interest spike starts on Twitter. Some topics demand a faster response time, like "san francisco tsunami warning", "flash ticket sale", or "stock market crashing". To handle alerts like these, I run a different TwitterStreamAgent and PeakDetectorAgent, with the TwitterStreamAgent checking every 2 minutes, the PeakDetectorAgent set to do immediate propagation.  Resulting peaks are sent directly to an email or SMS agent instead of a email digest, so that I get alerted right away.
 
 For more ideas and updates around Huginn, please [get involved](https://github.com/cantino/huginn) and [follow me on Twitter](https://twitter.com/tectonic)!
