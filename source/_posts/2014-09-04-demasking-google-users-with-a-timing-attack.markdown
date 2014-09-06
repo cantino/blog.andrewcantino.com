@@ -7,7 +7,7 @@ categories: [security, javascript]
 ---
 ## Responsible Disclosure
 
-I believe strongly in the responsible disclosure of security issues, [having participated in Google's responsible disclosure program in the past](http://blog.andrewcantino.com/blog/2011/12/14/hacking-google-for-fun-and-profit/) and helping to run a similar [disclosure program](https://hackerone.com/mavenlink) at Mavenlink.
+I believe strongly in the [responsible disclosure](http://en.wikipedia.org/wiki/Responsible_disclosure) of security issues, [having participated in Google's responsible disclosure program in the past](http://blog.andrewcantino.com/blog/2011/12/14/hacking-google-for-fun-and-profit/) and helping to run a similar [disclosure program](https://hackerone.com/mavenlink) at Mavenlink.
 
 The issues discussed in this post were responsibly disclosed to Google Security.  Google triaged the issues, talked to the involved teams, and declined the opportunity to fix.  They gave me written permission to blog about this.
 
@@ -15,7 +15,7 @@ The issues discussed in this post were responsibly disclosed to Google Security.
 
 **Summary**: A 3rd party site can determine if a website viewer has access to a particular Google Drive document.
 
-**Implications**: An attacker could share a document with one or more email addresses, but uncheck the option that causes Google to send a notification email.  Now the attacking site can figure out when someone logged into any of the shared addresses visits their site.  This is mostly useful for very targeted attacks, where an attacking site needs to behave differently based on who is viewing.  This could be used for spear phishing, identification of government officials, industrial mischief, etc.
+**Implications**: An attacker could share a document with one or more email addresses, but uncheck the option that causes Google to send a notification.  Now the attacking site can figure out when someone logged into any of the shared addresses visits their site.  This is mostly useful for very targeted attacks, where an attacking site needs to behave differently based on who is viewing.  This could be used for spear phishing, identification of government officials, demasking users of TOR, industrial mischief, etc.
 
 **How it works**:  The attack is straightforward. A malicious page repeatedly instantiates an image whose source points at the URL of a Google Drive document.  If that document is viewable by the visitor, loading the resulting page will take longer than if the document is not viewable.  Since the result isn't an image, the `onerror` callback of the image is triggered in both cases, but we can record how long it takes from image instantiation to triggering of the `onerror`.  This time will be greater when the document is accessible.  In my experiments, loading took an average of 891ms when the document was available, but 573ms when it was not.  Since this is going to be connection-dependent, it makes sense to simultaneously test against a document that is always known to be inaccessible, then compare times with the probe document.
 
