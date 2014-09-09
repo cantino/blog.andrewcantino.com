@@ -11,13 +11,13 @@ The issues discussed in this post were [responsibly disclosed](http://en.wikiped
 
 # The Attack
 
-**Summary**: Users are not clearly told that they're authorizing a 3rd party Google Apps Script until it's too late, making social engineering attacks far too easy.  Google shows an authorization screen, but that screen *does not* make it clear who owns the script.  The authorization screen allows any app name and doesn't indicate that it could be a 3rd party.  Worse, Google Apps Scripts are on a Google domain, so even savvy users who look for suspicious domains will be fooled.  After authorization, the script can do something malicious, such as upload the user's email, delete data, or access sensitive personal information via a Google API.
+**Summary**: Google Apps Script is a powerful scripting environment provided by Google that can make authenticated requests against user data inside of Google's properties.  When authorizing a Google Apps Script, users are unfortunately not clearly told that they're allowing a 3rd party access to their data until it's too late, making social engineering attacks far too easy.  Worse, Google Apps Scripts are on a Google domain, so even savvy users who look for suspicious domains will be fooled.  After authorization, the script can do something malicious, such as upload the user's email, delete data, or access sensitive personal information via a Google API.
 
 <!-- more -->
 
-**How it works**:  Google Apps Script is a very powerful scripting environment provided by Google that can make authenticated requests against user data inside of Google's properties.
+**How it works**:  
 
-Let's walk through the flow.  Here is a simple Google Apps Script that I made.  Notice the trust-worthy *google.com* domain.  This could also be linked to from another trust-worthy area of Google, such as a Google Drive document.
+Let's walk through the flow.  Here is a simple Google Apps Script that I made.  Notice the trust-worthy *google.com* domain.
 
 {% img /images/posts/security/auth-flow/step1.png %}
 
@@ -37,11 +37,9 @@ The user approves the app, because it seems completely legit:
 
 Once approved, my particular script actually just makes a new Gmail label, but it could have deleted data, emailed a link to the script to everyone in the user's contact list, manipulated personal information, or stolen data and sent it to a 3rd party.
 
-Effective security communication is really hard, but it's very important to communicate to a user what actions they're taking, especially during an authorization flow.  At minimum, I feel that Google should add a very prominent warning, both at the top of the script page and in the authorization box.
+Effective security communication is really hard, but it's critical to communicate to a user what actions they're taking, especially during an authorization flow.  At minimum, I feel that Google should add a very prominent warning, both at the top of the script page and in the authorization box.
 
-As it is, I feel it is unreasonable to expect that users would understand the possibility that malicious code could be executed while remaining entirely within the Google domain, especially if the script was served via another trusted Google service, such as Google Drive.
-
-Ironically, *after* authorization, Google sends an email explaining that a 3rd party app has been authorized, but at this point it's way, way too late! The app has already accessed the user's data, and has deleted, stolen, or manipulated it.
+As it is, I feel it is unreasonable to expect that users would understand the possibility that malicious code could be executed while remaining entirely within the Google domain.  Ironically, *after* authorization, Google sends an email explaining that a 3rd party app has been authorized, but at this point it's way, way too late! The app has already accessed the user's data, and has deleted, stolen, or manipulated it.
 
 ## Additional details
 
