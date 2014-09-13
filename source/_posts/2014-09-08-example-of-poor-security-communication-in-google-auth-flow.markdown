@@ -60,7 +60,10 @@ Unlike my recent [report to Google about a timing attack](/blog/2014/09/04/demas
 
 ## More about web security
 
+If you enjoyed this article, you should [follow me on Twitter](https://twitter.com/tectonic) for more.
+
 More articles I've written about web security and Google:
 
 * [Demasking Google Users with a Timing Attack](/blog/2014/09/04/demasking-google-users-with-a-timing-attack/)
 * [Hacking Google for Fun and Profit](/blog/2011/12/14/hacking-google-for-fun-and-profit/)
+
