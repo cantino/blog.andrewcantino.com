@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "A Quick RailsConf 2015 Party List"
+title: "A RailsConf 2015 Party And Event List"
 date: 2015-04-15 12:59:04 -0700
 comments: true
 categories: 
 ---
 
-Inspired by [Mike Perham's RailsConf 2013 event list](http://www.mikeperham.com/2013/04/11/railsconf-2013-events/), and not seeing one yet for this year's [RailsConf](http://railsconf.com/), I decided to put one together.  Please send me a note on [Twitter](https://twitter.com/tectonic) if you have something to add!
+Inspired by [Mike Perham's RailsConf 2013 event list](http://www.mikeperham.com/2013/04/11/railsconf-2013-events/), and not seeing one yet for this year's [RailsConf](http://railsconf.com/), I decided to put one together.  Please send me a note on [Twitter](https://twitter.com/tectonic) if you have a party or event to add!
 
 ## Monday
 
