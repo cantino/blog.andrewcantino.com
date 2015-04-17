@@ -8,7 +8,7 @@ categories:
 
 Inspired by [Mike Perham's RailsConf 2013 event list](http://www.mikeperham.com/2013/04/11/railsconf-2013-events/), and not seeing one yet for this year's [RailsConf](http://railsconf.com/), I decided to put one together.  Please send me a note on [Twitter](https://twitter.com/tectonic) if you have a party or event to add!
 
-_Last updated: Thursday, April 16th._
+_Last updated: Friday, April 17th._
 
 ## Sunday
 
@@ -21,6 +21,7 @@ _Last updated: Thursday, April 16th._
 ## Tuesday
 
 [Big Nerd Ranch Hack Night: RailsConf Edition](https://www.eventbrite.com/e/big-nerd-ranch-hack-night-railsconf-edition-tickets-16540850128) (7:00 PM to 10:00 PM)<br>
+[RailsConf Ruby Karaoke](https://www.eventbrite.com/e/railsconf-ruby-karaoke-tickets-16565911086) (8:30 PM to 11:30 PM)<br>
 
 ## Wednesday
 
