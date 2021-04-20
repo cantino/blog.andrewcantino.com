@@ -1,3 +1,6 @@
 #!/bin/sh
 bundle exec jekyll build
 s3cmd sync --no-mime-magic --guess-mime-type --delete-removed --acl-public --reduced-redundancy --cf-invalidate _site/* s3://blog.andrewcantino.com/
+
+# s3cmd sync --no-mime-magic --guess-mime-type --delete-removed --acl-public --reduced-redundancy _site/* s3://blog.andrewcantino.com/
+# echo "Not invalidating due to https://github.com/s3tools/s3cmd/issues/1006"
