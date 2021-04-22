@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Prompt Engineering Tips and Tricks"
+title: "Prompt Engineering Tips and Tricks with GPT-3"
 date: 2021-04-21 11:30:00 -0700
 comments: true
 ---
