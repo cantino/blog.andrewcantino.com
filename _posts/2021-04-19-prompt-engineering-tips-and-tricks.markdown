@@ -5,7 +5,15 @@ date: 2021-04-21 11:30:00 -0700
 comments: true
 ---
 
-Let's talk about Prompt Engineering (aka Prompt Tuning, Prompt Design, Few Shot Engineering).
+## Brief Background
+
+I'm going to assume you know what GPT-3 is and why it's a [Big Deal™](https://www.vox.com/future-perfect/21355768/gpt-3-ai-openai-turing-test-language).
+
+The way you interact with GPT-3 is through Prompt Engineering.
+
+In this post I'll briefly explain what Prompt Engineering is, why it matters, and some tips and tricks to help you do it well. While I doubt traditional programming is going away anytime soon, I do think that Prompt Engineering is going to be a very important part of most developers' toolboxes.
+
+## Prompt Engineering
 
 I've been fortunate enough to get to spend time integrating GPT-3 into a complex product. A significant portion of this time was spent doing "Prompt Engineering", in which you convince a Large Language Model (LLM) like GPT-3 that it is writing a document whose structure and content cause it to perform your desired task. This document, called the "prompt", often contains instructions and examples of what you'd like the LLM to do.
 
@@ -36,6 +44,82 @@ This prompt is interesting for a few reasons:
 1. The use of tags at the front of each idea forces the model to try and generate something within a space of interest.
 1. The model can be quite sensitive to the prompt "bleeding over" or "semantically contaminating" the output. That is, the ideas it generates will often look similar to and have the same structure as the examples. This is a general problem with few-shot examples, and motivates the usage of zero-shots when possible. In general, the style, language, and subject of your examples will strongly affect model completions.
 
+## A few more examples
+
+(**Bold** is the prompt, the rest is a sample completion.)
+
+A zero-shot:
+
+> **This is a poem written by Robert Frost about the perils of machine learning.**
+>
+> Alas! The machines are here.
+>
+> They'll eat our brains and take our jobs,
+>
+> They'll do our thinking for us,
+>
+> And all that we'll be able to do
+>
+> Is program them.
+>
+> Alas! Here comes the Machine
+
+Robert Frost was quite prescient.
+
+Another zero-shot:
+
+> **English: This sandwich is very tasty.**
+> 
+> **Spanish:** Este sándwich es muy rico.
+> 
+> English: This meat is very tender.
+> 
+> Spanish: Este carne es muy tierna.
+>
+> English: This fruit is very sweet.
+> 
+> Spanish: Este fruta es muy dulce.
+
+Here you can see an example of what happens if you allow the model to keep completing after you've gotten your result.
+
+A small few-shot:
+
+> **Translate each sentence into a string of emojis.**
+>
+> **English: That cat ate the fish.**
+> 
+> **Emojis: 🐱😋🐟**
+>
+> **English: What is this, a house for ants?**
+> 
+> **Emojis: 🏠🐜❓**
+>
+> **English: The quick brown fox jumps over the lazy dog.**
+> 
+> **Emojis: 💨🦊🏃😴🐕**
+>
+> **English: One small step for man, one giant leap for mankind.**
+> 
+> **Emojis:** 🚀🌌🌍🏃
+
+It's also really good at lists.
+
+> **Popular business books:**
+>
+> **-- The Innovator's Dilemma**
+>
+> **-- Peopleware**
+>
+> -- The Mythical Man-Month
+>
+> -- The Design of Everyday Things
+>
+> -- The Inmates Are Running the Asylum
+> 
+> -- The Goal
+> 
+> -- The Tipping Point
+
 ## Some things to keep in mind when writing prompts, in no particular order.
 
 ### The LLM is completing a document, and documents rarely change writing style halfway through.
@@ -60,4 +144,4 @@ Few-shots later in your examples will bias completion results more than earlier 
 
 ## Prompt Engineering is going to be important.
 
-While I doubt traditional programming is going away anytime soon, I do think that Prompt Engineering is going to be a very important part of a developer's toolbox. I'm excited to see where LLMs go (GPT-4 here we come!), and I'll add more tips as I learn them!
+As I said, I doubt traditional programming is going away anytime soon, but Prompt Engineering is probably here to stay. I'm excited to see where LLMs go (GPT-4 here we come!), and I'll add more tips as I learn them!
