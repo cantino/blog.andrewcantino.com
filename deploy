@@ -4,3 +4,5 @@ s3cmd sync --no-mime-magic --guess-mime-type --delete-removed --acl-public --red
 
 # s3cmd sync --no-mime-magic --guess-mime-type --delete-removed --acl-public --reduced-redundancy _site/* s3://blog.andrewcantino.com/
 # echo "Not invalidating due to https://github.com/s3tools/s3cmd/issues/1006"
+
+open 'https://blog.andrewcantino.com'
