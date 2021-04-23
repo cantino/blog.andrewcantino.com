@@ -2,6 +2,7 @@
 layout: post
 title: "Prompt Engineering Tips and Tricks with GPT-3"
 date: 2021-04-21 11:30:00 -0700
+description: "What GPT-3 Prompt Engineering is, why it matters, and some tips and tricks to help you do it well."
 comments: true
 ---
 

@@ -16,11 +16,16 @@
 title: andrew makes things
 author:
   name: Andrew Cantino
+  twitter: tectonic
 description: "Andrew Cantino blogs about programming, machine learning, and his experiments"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://blog.andrewcantino.com"
 twitter_username: tectonic
 github_username: cantino
+
+# Used by jekyll-seo-tag
+twitter:
+  username: tectonic
 
 disqus_short_name: andrewmakesthings
 
