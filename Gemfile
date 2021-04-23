@@ -24,6 +24,8 @@ gem 'jekyll-gist'
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem 'octopress-image-tag'
+  gem "jekyll-sitemap"
+  gem 'jekyll-seo-tag'
   # gem 'octopress', '~> 3.0.11'
   # gem 'octopress-codeblock'
   # gem 'octopress-quote-tag'
