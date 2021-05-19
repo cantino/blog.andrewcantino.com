@@ -10,9 +10,9 @@ comments: true
 
 I'm going to assume you know what GPT-3 is and why it's a [Big Deal™](https://www.vox.com/future-perfect/21355768/gpt-3-ai-openai-turing-test-language).
 
-The way you interact with GPT-3 is through Prompt Engineering.
+The way you interact with GPT-3, or its forthcoming competitors, is through Prompt Engineering.
 
-In this post I'll briefly explain what Prompt Engineering is, why it matters, and some tips and tricks to help you do it well. While I doubt traditional programming is going away anytime soon, I do think that Prompt Engineering is going to be a very important part of most developers' toolboxes.
+In this post I'll briefly explain what Prompt Engineering is, why it matters, and some tips and tricks to help you do it well. While I doubt traditional programming is going away anytime soon, I do predict that Prompt Engineering is going to be a very important part of most developers' toolboxes. Prompt Engineering allows developers to implement natural language understanding and soft decision-making processes that would otherwise be difficult or impossible.
 
 ## Prompt Engineering
 
@@ -132,7 +132,7 @@ If your prompt has spelling or grammar errors, or inconsistent formatting, compl
 
 ### Consider dynamically selecting the most relevant few-shots.
 
-Because of semantic contamination, it can be a good idea to have a database of few-shot examples that you select from based on the problem you're trying to solve. For example, if you have an app that allows generation of character names, let your user specify the genre, then seed the few-shots with sample names consistent with that genre. Or, in the idea generation case above, if you want to generate superb ideas for blockchain companies, make all of your few-shots be genuinely good examples of blockchain usages. If you want to generate ideas about animal husbandry, use few-shots from that space. Etc.
+Because the LLM will tend to follow the content as well as structure of your examples, it can be a good idea to have a database of few-shot examples that you select from based on the problem you're trying to solve. For example, if you have an app that allows generation of character names, let your user specify the genre, then seed the few-shots with sample names consistent with that genre. Or, in the idea generation case above, if you want to generate superb ideas for blockchain companies, make all of your few-shots be genuinely good examples of blockchain usages. If you want to generate ideas about animal husbandry, use few-shots from that space. Etc.
 
 ### Instead of generating N list items, generate 1 list item N times.
 
