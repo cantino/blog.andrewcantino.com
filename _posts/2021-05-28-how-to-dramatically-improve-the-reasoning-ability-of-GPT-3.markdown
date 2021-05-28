@@ -118,6 +118,8 @@ Some dogs are smaller than some cats.
 Result: Correct
 ```
 
-That's it. **Ask the model to show its work and its reasoning is significantly better.**
+That's it. **Ask the model to show its work and its reasoning is much better.**
 
-Do you have examples of this phenomenon as well? Please [let me know on Twitter](https://twitter.com/tectonic)!
+Matt Brockman has [explored this idea using the WIC benchmark](http://gptprompts.wikidot.com/linguistics:word-in-context).
+
+Do you have more examples of this phenomenon as well? Please [let me know on Twitter](https://twitter.com/tectonic)!
