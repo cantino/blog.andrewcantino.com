@@ -6,8 +6,6 @@ description: "What GPT-3 Prompt Engineering is, why it matters, and some tips an
 comments: true
 ---
 
-## Brief Background
-
 I'm going to assume you know what GPT-3 is and why it's a [Big Deal™](https://www.vox.com/future-perfect/21355768/gpt-3-ai-openai-turing-test-language).
 
 The way you interact with GPT-3, or its forthcoming competitors, is through Prompt Engineering.
