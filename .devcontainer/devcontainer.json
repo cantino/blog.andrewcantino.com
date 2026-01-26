@@ -1,0 +1,65 @@
+{
+  "name": "Jekyll Blog",
+
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+
+  "workspaceFolder": "/workspace",
+
+  // Named volume for gems to avoid architecture conflicts between host and container
+  "mounts": [
+    "source=blog-bundle,target=/bundle,type=volume"
+  ],
+
+  // Features for development
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {
+      "version": "latest"
+    },
+    "ghcr.io/devcontainers/features/github-cli:1": {
+      "version": "latest"
+    }
+  },
+
+  // Port forwarding for Jekyll dev server
+  "forwardPorts": [4000],
+
+  "portsAttributes": {
+    "4000": {
+      "label": "Jekyll Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Install gems after container creation
+  "postCreateCommand": "sudo chown -R dev:dev /bundle && bundle install",
+
+  // Add workspace to git safe directory
+  "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
+
+  // Environment variables
+  "containerEnv": {
+    "BUNDLE_PATH": "/bundle/vendor",
+    "BUNDLE_BIN": "/bundle/vendor/bin",
+    "GEM_HOME": "/bundle/vendor",
+    "JEKYLL_ENV": "development"
+  },
+
+  // VS Code customizations
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rebornix.ruby",
+        "editorconfig.editorconfig"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "files.eol": "\n"
+      }
+    }
+  },
+
+  // Run as non-root user
+  "remoteUser": "dev"
+}

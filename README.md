@@ -1,4 +1,6 @@
-Install:
+`devpod up .`
+
+OR install:
 ```
 gem install eventmachine -- --with-openssl-dir=/usr/local/opt/openssl@1.1
 bundle
