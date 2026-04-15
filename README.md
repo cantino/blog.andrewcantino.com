@@ -8,6 +8,11 @@ bundle
 
 Dev:
 ```
+devpod up .
+```
+
+or local:
+```
 bundle exec jekyll serve
 ```
 
